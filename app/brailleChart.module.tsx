@@ -17,16 +17,20 @@ const BrailleChart = ({ values, height, colormatic = false, reversed }: { values
                 <p
                     key={y}
                     className={style.line}
-                    style={{ color: colormatic ? !reversed ? `rgb(${map(y, 0, main_height, 255, 0)}, ${map(y, 0, main_height, 0, 255)}, 0)` : `rgb(${map(y, 0, main_height, 0, 255)}, ${map(y, 0, main_height, 255, 0)}, 0)` : 'white' }}>
+                    style={{
+                        color: colormatic ?
+                            !reversed ?
+                                `rgb(${map(y, 0, main_height, 255, 0)}, ${map(y, 0, main_height, 0, 255)}, 0)` :
+                                `rgb(${map(y, 0, main_height, 0, 255)}, ${map(y, 0, main_height, 255, 0)}, 0)`
+                            : 'white'
+                    }}>
                     {toBraille(getFragment(reversed_array, x, y))}<br />
                 </p>
             );
         }
         lines.push(<p key={x} className={style.line}>{line}</p>);
     }
-    return (
-        <pre className={style.parent}>{lines}</pre>
-    );
+    return (<div className={style.parent}>{lines}</div>);
 }
 
 const getFragment = (array: number[][], offset_x: number, offset_y: number) => {
