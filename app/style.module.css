@@ -1,0 +1,12 @@
+.line {
+    margin: 0;
+    line-height: .8;
+    letter-spacing: -.4rem;
+    font-size: 1rem;
+}
+
+.parent {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
