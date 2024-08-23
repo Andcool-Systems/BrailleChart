@@ -59,7 +59,6 @@ const toBraille = (points: number[][]): string => {
     for (let y = 0; y < 2; y++) {
         for (let x = 0; x < 3; x++) {
             bit_representation += points[x][y] > 0 ? '1' : '0';
-
         }
     }
     const result_unicode = parseInt(bit_representation.split('').reverse().join(''), 2) + 0x2800;
