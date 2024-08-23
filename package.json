@@ -9,9 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "braille": "^1.1.0",
     "next": "14.2.6",
-    "perlin-noise": "^0.0.1",
     "react": "^18",
     "react-dom": "^18"
   },
