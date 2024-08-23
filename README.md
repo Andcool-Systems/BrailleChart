@@ -42,4 +42,4 @@
 ![combine_1](./docs/static/combine_1.png)     
 
 ---
-**by AndcoolSystems, 22 August, 2024**
+**by AndcoolSystems, August 22, 2024**
